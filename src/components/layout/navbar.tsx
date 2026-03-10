@@ -22,7 +22,7 @@ export const Navbar = () => {
     <header className="fixed left-0 right-0 top-0 z-50 flex justify-center px-4 pt-4 sm:px-6">
       <div
         className={cn(
-          "w-full max-w-7xl rounded-3xl border border-purple-200/70 bg-white/90 backdrop-blur-xl transition-all duration-300",
+          "w-full max-w-7xl rounded-3xl border border-purple-200/70 bg-white/50 backdrop-blur-xl transition-all duration-300",
           scrolled
             ? "shadow-xl shadow-violet-200/40 border-purple-300/60"
             : "shadow-md shadow-violet-100/30",
