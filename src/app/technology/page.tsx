@@ -34,7 +34,7 @@ export default function TechnologyPage() {
                 {group.items.map((item) => (
                   <div
                     key={item.name}
-                    className="flex flex-col items-center gap-3 rounded-xl border border-purple-200 bg-white/80 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-400 hover:shadow-md hover:shadow-violet-200/50"
+                    className="flex flex-col items-center gap-3 rounded-xl border border-purple-200 bg-white/65 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-400 hover:shadow-md hover:shadow-violet-200/50"
                   >
                     {item.logoUrl ? (
                       <img src={item.logoUrl} alt={item.name} className="h-10 w-10 object-contain" loading="lazy" />
