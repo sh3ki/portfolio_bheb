@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <div className="page-bg flex min-h-screen flex-col">
           <Navbar />
-          <main className="relative z-10 flex-1 pt-24">{children}</main>
+          <main className="relative z-10 flex-1 pt-2">{children}</main>
           <Footer />
         </div>
       </body>
