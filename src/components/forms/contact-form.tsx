@@ -48,7 +48,7 @@ export const ContactForm = ({
   };
 
   return (
-    <div className={narrow ? "mx-auto w-full max-w-2xl" : undefined}>
+    <div className={narrow ? "mx-auto w-full" : undefined}>
       <div className="card-surface relative overflow-hidden p-8 md:p-10">
         <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-fuchsia-300/25 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-12 -left-12 h-32 w-32 rounded-full bg-violet-300/20 blur-2xl" />
