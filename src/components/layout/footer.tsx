@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Instagram, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, ArrowUpRight } from "lucide-react";
 import { navLinks, profile } from "@/lib/content";
 
 export const Footer = () => {
@@ -57,10 +57,6 @@ export const Footer = () => {
               <li className="flex items-center gap-2 text-sm text-gray-600">
                 <Facebook size={14} className="text-violet-500 shrink-0" />
                 <span>{profile.facebook}</span>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-gray-600">
-                <Instagram size={14} className="text-violet-500 shrink-0" />
-                <span>{profile.instagram}</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-600">
                 <MapPin size={14} className="text-violet-500 shrink-0" />
