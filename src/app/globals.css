@@ -1,59 +1,126 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @config "../../tailwind.config.js";
 
 :root {
-  --background: #fdf7ff;
+  --background: #fdf4ff;
   --foreground: #1a0030;
-  --muted: #7c6b8a;
-  --primary: #a855f7;
-  --border: #e9d5ff;
+  --muted:      #7c6b8a;
+  --primary:    #a855f7;
+  --border:     #e9d5ff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-primary: var(--primary);
-  --color-border: var(--border);
-  --font-sans: var(--font-inter);
+  --color-muted:      var(--muted);
+  --color-primary:    var(--primary);
+  --color-border:     var(--border);
+  --font-sans:        var(--font-inter);
 }
 
-* {
-  border-color: var(--border);
-}
+* { border-color: var(--border); }
 
-body {
-  background: var(--background);
+html, body {
+  background: #f0e6ff;
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
-  background-image:
-    radial-gradient(ellipse at 8% 4%, rgba(233, 213, 255, 0.90), transparent 40%),
-    radial-gradient(ellipse at 92% 5%, rgba(251, 182, 220, 0.75), transparent 36%),
-    radial-gradient(ellipse at 50% 100%, rgba(216, 180, 254, 0.65), transparent 45%),
-    radial-gradient(ellipse at 18% 68%, rgba(252, 211, 236, 0.50), transparent 33%),
-    radial-gradient(ellipse at 80% 55%, rgba(245, 208, 254, 0.45), transparent 38%),
-    radial-gradient(ellipse at 42% 38%, rgba(254, 215, 241, 0.25), transparent 28%);
 }
 
+/* ─── Diagonal X‑crosshatch background ───────────────────────────────────── */
+.page-bg {
+  background:
+    /* ── Bands going top-right → bottom-left (45°) ── */
+    linear-gradient(
+      45deg,
+      transparent               8%,
+      rgba(216,180,254,0.40)    8%,
+      rgba(216,180,254,0.40)    16%,
+      transparent               17%,
+
+      transparent               28%,
+      rgba(192,132,252,0.30)    28%,
+      rgba(192,132,252,0.30)    34%,
+      transparent               35%,
+
+      transparent               48%,
+      rgba(216,180,254,0.45)    48%,
+      rgba(216,180,254,0.45)    58%,
+      rgba(216,180,254,0.15)    61%,
+      transparent               63%,
+
+      transparent               70%,
+      rgba(192,132,252,0.28)    70%,
+      rgba(192,132,252,0.28)    76%,
+      transparent               77%,
+
+      transparent               86%,
+      rgba(216,180,254,0.35)    86%,
+      rgba(216,180,254,0.35)    93%,
+      transparent               94%
+    ),
+    /* ── Bands going top-left → bottom-right (135°) ── */
+    linear-gradient(
+      135deg,
+      transparent               5%,
+      rgba(244,114,182,0.25)    5%,
+      rgba(244,114,182,0.25)    13%,
+      transparent               14%,
+
+      transparent               22%,
+      rgba(216,180,254,0.38)    22%,
+      rgba(216,180,254,0.38)    31%,
+      transparent               32%,
+
+      transparent               44%,
+      rgba(244,114,182,0.30)    44%,
+      rgba(244,114,182,0.30)    54%,
+      rgba(244,114,182,0.10)    57%,
+      transparent               59%,
+
+      transparent               66%,
+      rgba(216,180,254,0.32)    66%,
+      rgba(216,180,254,0.32)    72%,
+      transparent               73%,
+
+      transparent               82%,
+      rgba(244,114,182,0.22)    82%,
+      rgba(244,114,182,0.22)    89%,
+      transparent               90%
+    ),
+    /* ── Base gradient: light lavender → soft pink → pale violet ── */
+    linear-gradient(
+      150deg,
+      #fdf0ff   0%,
+      #fce7f3  20%,
+      #f3e8ff  40%,
+      #fad7f0  60%,
+      #ede9fe  80%,
+      #ede9fe 100%
+    );
+}
+
+/* ─── Layout utilities ────────────────────────────────────────────────────── */
 .container-width {
   @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 
-/* Rich card with hover lift ------------------------------------------------ */
+/* ─── Cards ──────────────────────────────────────────────────────────────── */
 .card-surface {
-  @apply rounded-2xl border border-purple-200/70 bg-white/90 shadow-[0_8px_40px_-12px_rgba(168,85,247,0.18)] backdrop-blur-sm
-         transition-all duration-300;
+  @apply rounded-2xl border border-purple-200/70 bg-white/92 shadow-[0_8px_40px_-12px_rgba(168,85,247,0.18)]
+         backdrop-blur-sm transition-all duration-300;
 }
 .card-surface:hover {
-  @apply -translate-y-1 shadow-[0_20px_60px_-12px_rgba(168,85,247,0.28)] border-purple-300/80;
+  @apply -translate-y-1 shadow-[0_20px_60px_-12px_rgba(168,85,247,0.30)] border-purple-300/80;
 }
 
+/* ─── Typography helpers ─────────────────────────────────────────────────── */
 .text-gradient {
   @apply bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent;
 }
 
 .eyebrow {
-  @apply inline-flex rounded-full border border-fuchsia-300/60 bg-fuchsia-50 px-4 py-1.5 text-xs mb-6 font-semibold uppercase tracking-[0.2em] text-fuchsia-700;
+  @apply inline-flex rounded-full border border-fuchsia-300/60 bg-white/70 px-4 py-1.5
+         text-xs mb-6 font-semibold uppercase tracking-[0.2em] text-fuchsia-700;
 }
 
 .section-title {
@@ -64,87 +131,7 @@ body {
   @apply mt-4 max-w-3xl text-base text-gray-500 sm:text-lg;
 }
 
-.grid-overlay {
-  background-image: linear-gradient(rgba(168, 85, 247, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.07) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-.diagonal-lines {
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 28px,
-    rgba(168, 85, 247, 0.04) 28px,
-    rgba(168, 85, 247, 0.04) 29px
-  );
-}
-
-/* Floating decorative blobs ------------------------------------------------ */
-@keyframes blob-drift {
-  0%, 100% { transform: translate(0px, 0px) scale(1); }
-  33%       { transform: translate(18px, -22px) scale(1.06); }
-  66%       { transform: translate(-12px, 14px) scale(0.96); }
-}
-@keyframes blob-drift-alt {
-  0%, 100% { transform: translate(0px, 0px) scale(1); }
-  33%       { transform: translate(-20px, 16px) scale(1.04); }
-  66%       { transform: translate(14px, -12px) scale(0.97); }
-}
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
-}
-
-.blob {
-  border-radius: 9999px;
-  filter: blur(72px);
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-}
-.blob-1 {
-  width: 560px;
-  height: 560px;
-  top: -140px;
-  left: -120px;
-  background: radial-gradient(circle, rgba(216,180,254,0.75), rgba(251,182,220,0.45));
-  animation: blob-drift 14s ease-in-out infinite;
-}
-.blob-2 {
-  width: 480px;
-  height: 480px;
-  top: 40px;
-  right: -100px;
-  background: radial-gradient(circle, rgba(251,182,220,0.72), rgba(245,208,254,0.40));
-  animation: blob-drift-alt 18s ease-in-out infinite;
-}
-.blob-3 {
-  width: 640px;
-  height: 640px;
-  bottom: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(233,213,255,0.65), rgba(252,211,236,0.38));
-  animation: blob-drift 22s ease-in-out infinite reverse;
-}
-.blob-4 {
-  width: 300px;
-  height: 300px;
-  top: 50%;
-  left: 30%;
-  background: radial-gradient(circle, rgba(254,215,241,0.35), transparent);
-  animation: blob-drift-alt 16s ease-in-out infinite 4s;
-}
-
-/* Floating dots pattern ---------------------------------------------------- */
-.dot-pattern {
-  background-image: radial-gradient(circle, rgba(168, 85, 247, 0.22) 1.5px, transparent 1.5px);
-  background-size: 24px 24px;
-  opacity: 0.8;
-}
-
-/* Scroll reveal helper ----------------------------------------------------- */
+/* ─── Utility ─────────────────────────────────────────────────────────────── */
 .hover-lift {
   @apply transition-all duration-300 hover:-translate-y-1;
 }
