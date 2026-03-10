@@ -16,7 +16,6 @@ const contactItems = [
   { label: "Email", value: profile.email, icon: Mail, href: `mailto:${profile.email}` },
   { label: "Phone", value: profile.phone, icon: Phone, href: `tel:${profile.phone}` },
   { label: "Facebook", value: profile.facebook, icon: Facebook, href: `https://${profile.facebook}` },
-  { label: "Instagram", value: profile.instagram, icon: Instagram, href: `https://instagram.com/${profile.instagram.replace("@", "")}` },
   { label: "Location", value: profile.location, icon: MapPin, href: null },
 ];
 
