@@ -68,14 +68,22 @@ export const profile = {
 };
 
 export const featuredTechnologies: TechItem[] = [
-  { name: "React",       icon: Layers,    logoUrl: `${DI}/react/react-original.svg` },
-  { name: "Next.js",     icon: AppWindow, logoUrl: `${DI}/nextjs/nextjs-original.svg` },
-  { name: "TypeScript",  icon: Code2,     logoUrl: `${DI}/typescript/typescript-original.svg` },
-  { name: "Node.js",     icon: ServerCog, logoUrl: `${DI}/nodejs/nodejs-original.svg` },
-  { name: "Flutter",     icon: Smartphone,logoUrl: `${DI}/flutter/flutter-original.svg` },
-  { name: "PostgreSQL",  icon: Database,  logoUrl: `${DI}/postgresql/postgresql-original.svg` },
-  { name: "Docker",      icon: Package,   logoUrl: `${DI}/docker/docker-original.svg` },
-  { name: "Laravel",     icon: Server,    logoUrl: `${DI}/laravel/laravel-original.svg` },
+  { name: "React",         icon: Layers,     logoUrl: `${DI}/react/react-original.svg` },
+  { name: "Next.js",       icon: AppWindow,  logoUrl: `${DI}/nextjs/nextjs-original.svg` },
+  { name: "Vue.js",        icon: Layers,     logoUrl: `${DI}/vuejs/vuejs-original.svg` },
+  { name: "TypeScript",    icon: Code2,      logoUrl: `${DI}/typescript/typescript-original.svg` },
+  { name: "Node.js",       icon: ServerCog,  logoUrl: `${DI}/nodejs/nodejs-original.svg` },
+  { name: "Laravel",       icon: Server,     logoUrl: `${DI}/laravel/laravel-original.svg` },
+  { name: "Django",        icon: Server,     logoUrl: `${DI}/django/django-plain.svg` },
+  { name: "Python",        icon: Terminal,   logoUrl: `${DI}/python/python-original.svg` },
+  { name: "Flutter",       icon: Smartphone, logoUrl: `${DI}/flutter/flutter-original.svg` },
+  { name: "React Native",  icon: Smartphone, logoUrl: `${DI}/react/react-original.svg` },
+  { name: "Kotlin",        icon: Smartphone, logoUrl: `${DI}/kotlin/kotlin-original.svg` },
+  { name: "Firebase",      icon: Database,   logoUrl: `${DI}/firebase/firebase-original.svg` },
+  { name: "PostgreSQL",    icon: Database,   logoUrl: `${DI}/postgresql/postgresql-original.svg` },
+  { name: "Docker",        icon: Package,    logoUrl: `${DI}/docker/docker-original.svg` },
+  { name: "Figma",         icon: Figma,      logoUrl: `${DI}/figma/figma-original.svg` },
+  { name: "Jira",          icon: LayoutDashboard, logoUrl: `${DI}/jira/jira-original.svg` },
 ];
 
 export const spotlightCards = [
