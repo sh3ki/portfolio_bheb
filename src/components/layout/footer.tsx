@@ -4,9 +4,9 @@ import { navLinks, profile } from "@/lib/content";
 
 export const Footer = () => {
   return (
-    <footer className="relative mt-10 overflow-hidden border-t border-purple-100">
+    <footer className="relative z-10 mt-10 overflow-hidden border-t border-purple-100">
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-fuchsia-50/60 to-pink-50/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-fuchsia-50/70 to-pink-50 opacity-95" />
       <div className="absolute inset-0 dot-pattern opacity-40" />
 
       <div className="relative container-width py-14">
