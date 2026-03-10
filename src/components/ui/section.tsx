@@ -8,7 +8,7 @@ type SectionProps = {
 
 export const Section = ({ id, className, children }: SectionProps) => {
   return (
-    <section id={id} className={cn("py-20", className)}>
+    <section id={id} className={cn("py-12 md:py-20", className)}>
       <div className="container-width">{children}</div>
     </section>
   );
