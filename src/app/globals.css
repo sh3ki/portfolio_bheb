@@ -65,9 +65,19 @@ body {
 }
 
 .grid-overlay {
-  background-image: linear-gradient(rgba(168, 85, 247, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-image: linear-gradient(rgba(168, 85, 247, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.diagonal-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 28px,
+    rgba(168, 85, 247, 0.04) 28px,
+    rgba(168, 85, 247, 0.04) 29px
+  );
 }
 
 /* Floating decorative blobs ------------------------------------------------ */
@@ -94,28 +104,28 @@ body {
   z-index: 0;
 }
 .blob-1 {
-  width: 480px;
-  height: 480px;
-  top: -120px;
-  left: -100px;
-  background: radial-gradient(circle, rgba(216,180,254,0.55), rgba(251,182,220,0.30));
+  width: 560px;
+  height: 560px;
+  top: -140px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(216,180,254,0.75), rgba(251,182,220,0.45));
   animation: blob-drift 14s ease-in-out infinite;
 }
 .blob-2 {
-  width: 400px;
-  height: 400px;
+  width: 480px;
+  height: 480px;
   top: 40px;
-  right: -80px;
-  background: radial-gradient(circle, rgba(251,182,220,0.55), rgba(245,208,254,0.25));
+  right: -100px;
+  background: radial-gradient(circle, rgba(251,182,220,0.72), rgba(245,208,254,0.40));
   animation: blob-drift-alt 18s ease-in-out infinite;
 }
 .blob-3 {
-  width: 560px;
-  height: 560px;
-  bottom: -180px;
+  width: 640px;
+  height: 640px;
+  bottom: -200px;
   left: 50%;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(233,213,255,0.45), rgba(252,211,236,0.25));
+  background: radial-gradient(circle, rgba(233,213,255,0.65), rgba(252,211,236,0.38));
   animation: blob-drift 22s ease-in-out infinite reverse;
 }
 .blob-4 {
@@ -129,8 +139,9 @@ body {
 
 /* Floating dots pattern ---------------------------------------------------- */
 .dot-pattern {
-  background-image: radial-gradient(circle, rgba(168, 85, 247, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(168, 85, 247, 0.22) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
+  opacity: 0.8;
 }
 
 /* Scroll reveal helper ----------------------------------------------------- */
