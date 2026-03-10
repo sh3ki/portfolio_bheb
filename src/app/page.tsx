@@ -41,7 +41,7 @@ export default function Home() {
               {quickMetrics.map(({ label, value, icon: Icon }) => (
                 <div
                   key={label}
-                  className="flex items-center gap-3 rounded-2xl border border-purple-200 bg-white/80 px-5 py-3 shadow-sm shadow-violet-100/40 transition-all hover:border-violet-300 hover:shadow-violet-200/50"
+                  className="flex items-center gap-3 rounded-2xl border border-purple-200 bg-white/65 px-5 py-3 shadow-sm shadow-violet-100/40 transition-all hover:border-violet-300 hover:shadow-violet-200/50"
                 >
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-violet-100 to-fuchsia-100">
                     <Icon size={14} className="text-violet-600" />
