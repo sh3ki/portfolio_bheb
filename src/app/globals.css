@@ -106,7 +106,7 @@ html, body {
 
 /* ─── Cards ──────────────────────────────────────────────────────────────── */
 .card-surface {
-  @apply rounded-2xl border border-purple-200/70 bg-white/92 shadow-[0_8px_40px_-12px_rgba(168,85,247,0.18)]
+  @apply rounded-2xl border border-purple-200/70 bg-white/65 shadow-[0_8px_40px_-12px_rgba(168,85,247,0.18)]
          backdrop-blur-sm transition-all duration-300;
 }
 .card-surface:hover {
