@@ -73,8 +73,8 @@ export default function Home() {
                 <Image
                   src="/berlyn.png"
                   alt="Bheberlyn O. Eugenio — Software Project Manager"
-                  width={420}
-                  height={520}
+                  width={380}
+                  height={420}
                   className="object-cover"
                   priority
                 />
@@ -169,7 +169,7 @@ export default function Home() {
             <CheckCircle2 size={16} />
             <span>Available for project collaboration and consulting engagements</span>
           </div>
-          <ContactForm />
+          <ContactForm narrow />
         </FadeIn>
       </Section>
     </>
