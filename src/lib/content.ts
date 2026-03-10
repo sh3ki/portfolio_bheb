@@ -60,10 +60,9 @@ export const profile = {
   role: "Software Project Manager",
   tagline:
     "Delivering reliable, high-quality software systems from planning to production — on time, within scope, and built to scale.",
-  email: "bheberlyn.eugenio@gmail.com",
+  email: "berlyneugenio657@gmail.com",
   facebook: "facebook.com/bheberlyn.eugenio",
-  phone: "+63 900 000 0000",
-  instagram: "@bheberlyn.eugenio",
+  phone: "+63 993 838 4383",
   location: "Laguna, Philippines",
 };
 
