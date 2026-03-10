@@ -111,7 +111,7 @@ export default function AboutPage() {
           <h2 className="mb-5 text-2xl font-semibold text-gray-900">Skills Summary</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {skillsSummary.map(({ label, icon: Icon }) => (
-              <div key={label} className="flex items-center gap-3 rounded-xl border border-purple-200 bg-white/80 p-4 text-gray-700 transition hover:border-violet-400 hover:shadow-sm hover:shadow-violet-200/40">
+              <div key={label} className="flex items-center gap-3 rounded-xl border border-purple-200 bg-white/65 p-4 text-gray-700 transition hover:border-violet-400 hover:shadow-sm hover:shadow-violet-200/40">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-violet-100 to-fuchsia-100">
                   <Icon size={16} className="text-violet-600" />
                 </div>
