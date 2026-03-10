@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, BadgeCheck } from "lucide-react";
+import { ArrowRight, BadgeCheck, RefreshCcw, Target, Map, MessageSquare, Package, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/forms/contact-form";
 import { FadeIn } from "@/components/ui/fade-in";
@@ -21,12 +21,12 @@ const leadershipStyle = [
 ];
 
 const skillsSummary = [
-  "Agile & Scrum Facilitation",
-  "Project Scoping and Estimation",
-  "Roadmap and Release Management",
-  "Stakeholder Communication",
-  "System Delivery Coordination",
-  "Technical Documentation Oversight",
+  { label: "Agile & Scrum Facilitation",        icon: RefreshCcw },
+  { label: "Project Scoping and Estimation",     icon: Target },
+  { label: "Roadmap and Release Management",     icon: Map },
+  { label: "Stakeholder Communication",          icon: MessageSquare },
+  { label: "System Delivery Coordination",       icon: Package },
+  { label: "Technical Documentation Oversight", icon: FileText },
 ];
 
 export default function AboutPage() {
@@ -110,9 +110,12 @@ export default function AboutPage() {
         <FadeIn className="card-surface p-8">
           <h2 className="mb-5 text-2xl font-semibold text-gray-900">Skills Summary</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {skillsSummary.map((item) => (
-              <div key={item} className="rounded-xl border border-purple-200 bg-white/80 p-4 text-gray-700 transition hover:border-violet-400 hover:shadow-sm hover:shadow-violet-200/40">
-                {item}
+            {skillsSummary.map(({ label, icon: Icon }) => (
+              <div key={label} className="flex items-center gap-3 rounded-xl border border-purple-200 bg-white/80 p-4 text-gray-700 transition hover:border-violet-400 hover:shadow-sm hover:shadow-violet-200/40">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-violet-100 to-fuchsia-100">
+                  <Icon size={16} className="text-violet-600" />
+                </div>
+                <span className="text-sm font-medium">{label}</span>
               </div>
             ))}
           </div>
@@ -133,7 +136,7 @@ export default function AboutPage() {
 
       <Section id="contact">
         <FadeIn>
-          <ContactForm />
+          <ContactForm narrow />
         </FadeIn>
       </Section>
     </>
