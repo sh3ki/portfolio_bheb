@@ -81,7 +81,7 @@ export default function ServicesPage() {
 
       <Section id="contact">
         <FadeIn>
-          <ContactForm />
+          <ContactForm narrow />
         </FadeIn>
       </Section>
     </>
