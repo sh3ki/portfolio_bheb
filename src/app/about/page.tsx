@@ -51,7 +51,7 @@ export default function AboutPage() {
             </div>
           </div>
           <FadeIn delay={0.15} className="flex justify-center">
-            <div className="relative">
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm">
               <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-violet-200 via-fuchsia-200 to-pink-200 opacity-50 blur-lg" />
               <div className="relative overflow-hidden rounded-3xl border-2 border-purple-200/80 shadow-xl shadow-violet-200/30">
                 <Image
