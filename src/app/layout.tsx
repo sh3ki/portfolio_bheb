@@ -33,18 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} antialiased`}>
-        <div className="relative flex min-h-screen flex-col overflow-x-clip">
-          {/* Animated background blobs */}
-          <div className="blob blob-1" />
-          <div className="blob blob-2" />
-          <div className="blob blob-3" />
-          <div className="blob blob-4" />
-          {/* Dot pattern overlay */}
-          <div className="pointer-events-none absolute inset-0 dot-pattern" />
-          {/* Grid overlay */}
-          <div className="pointer-events-none absolute inset-0 grid-overlay" />
-          {/* Diagonal line overlay */}
-          <div className="pointer-events-none absolute inset-0 diagonal-lines" />
+        <div className="page-bg flex min-h-screen flex-col">
           <Navbar />
           <main className="relative z-10 flex-1 pt-24">{children}</main>
           <Footer />
